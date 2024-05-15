@@ -1,0 +1,48 @@
+//
+//  Project.swift
+//  {{ name }}
+//
+//  Created by 홍경표
+//
+
+import ProjectDescription
+
+let projectName: String = "{{ name }}"
+
+let project = Project(
+    name: projectName,
+    targets: [
+        .target(
+            name: projectName,
+            destinations: .iOS,
+            product: .app,
+            bundleId: "kr.pio.\(projectName)",
+            deploymentTargets: .iOS("13.0"),
+            infoPlist: .extendingDefault(
+                with: [
+                    "UILaunchStoryboardName": "LaunchScreen.storyboard",
+                    "UIApplicationSceneManifest": [
+                        "UIApplicationSupportsMultipleScenes": false,
+                        "UISceneConfigurations": [
+                            "UIWindowSceneSessionRoleApplication": [
+                                [
+                                    "UISceneConfigurationName": "Default Configuration",
+                                    "UISceneDelegateClassName": "$(PRODUCT_MODULE_NAME).SceneDelegate"
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ),
+            sources: ["\(projectName)/Sources/**"],
+            resources: ["\(projectName)/Resources/**"],
+            dependencies: [
+                // .external(name: "Then"),
+                // .external(name: "RxSwift"),
+                // .external(name: "RxCocoa"),
+                // .external(name: "FlexLayout"),
+                // .external(name: "PinLayout"),
+            ]
+        ),
+    ]
+)
