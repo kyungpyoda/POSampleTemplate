@@ -31,4 +31,25 @@ tuist scaffold templates
           - SceneDelgate.swift
     ```
   </details>
+- SingleModuleApp2
+  <details>
+    <summary>Details...</summary>
+
+    ```
+    YourProjectDirectory
+      - .gitignore
+      - .mise.toml
+      - README.md
+      - Tuist
+        - Package.swift
+      - MySampleApp
+        - Resources
+          - Assets.xcassets
+          - Preview Content
+            - Preview Asset.xcassets
+        - Sources
+          - MySampleApp.swift
+          - ContentView.swift
+    ```
+  </details>
 - _WIP... ⏳_

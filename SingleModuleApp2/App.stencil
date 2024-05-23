@@ -1,0 +1,17 @@
+//
+//  {{ name }}App.swift
+//  {{ name }}
+//
+//  Created by 홍경표
+//
+
+import SwiftUI
+
+@main
+struct {{ name }}App: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}

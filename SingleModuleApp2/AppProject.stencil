@@ -1,0 +1,39 @@
+//
+//  Project.swift
+//  {{ name }}
+//
+//  Created by 홍경표
+//
+
+import ProjectDescription
+
+let projectName: String = "{{ name }}"
+
+let project = Project(
+    name: projectName,
+    targets: [
+        .target(
+            name: projectName,
+            destinations: .iOS,
+            product: .app,
+            bundleId: "kr.pio.\(projectName)",
+            deploymentTargets: .iOS("15.0"),
+            infoPlist: .extendingDefault(with: [
+                "UIApplicationSceneManifest": [
+                    "UIApplicationSupportsMultipleScenes": false,
+                    "UISceneConfigurations": [:]
+                ],
+                "UILaunchScreen": [
+                    "UILaunchScreen": [:]
+                ]
+            ]),
+            sources: ["\(projectName)/Sources/**"],
+            resources: ["\(projectName)/Resources/**"],
+            dependencies: [
+                // .external(name: "Then"),
+                // .external(name: "RxSwift"),
+                // .external(name: "RxCocoa"),
+            ]
+        ),
+    ]
+)
