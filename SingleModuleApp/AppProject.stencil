@@ -42,6 +42,9 @@ let project = Project(
                 // .external(name: "RxCocoa"),
                 // .external(name: "FlexLayout"),
                 // .external(name: "PinLayout"),
+            ],
+            additionalFiles: [
+                "Project.swift",
             ]
         ),
     ]
